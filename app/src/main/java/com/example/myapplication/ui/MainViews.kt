@@ -102,7 +102,7 @@ fun FormView(vm: MainViewModel) {
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(text = "Criar Contacto", modifier = Modifier.padding(vertical = 30.dp)) // Form title
+        Text(text = "Add Contact", modifier = Modifier.padding(vertical = 30.dp), fontWeight = FontWeight.Bold) // Form title
         Spacer(modifier = Modifier.height(5.dp))
 
         // Input for name
@@ -254,7 +254,13 @@ fun EditScreen(vm: MainViewModel, nav: NavController) {
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Spacer(modifier = Modifier.height(50.dp))
+        // Title
+        Text(
+            text = "Edit",
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier.padding(vertical = 16.dp)
+        )
+        Spacer(modifier = Modifier.height(30.dp))
         // Name input
         OutlinedTextField(
             value = name,
